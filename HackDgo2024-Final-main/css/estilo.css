@@ -1,0 +1,117 @@
+:root {
+    --color-dark-green: #2B4016;
+    --color-medium-green: #50732D;
+    --color-light-green: #84A64E;
+    --color-light-gray: #F0F2F2;
+    --color-gray: #A8BBBF;
+}
+.icono-contacto{
+    background-color: #83A64E!important;
+}
+
+.img-logo{
+    width: 200px;
+}
+
+.dato-oscuro{
+    background-color: var(--color-dark-green)!important;
+}
+
+.dato-claro{
+    background-color: var(--color-light-green)!important;
+}
+
+.formBuscar{
+    width: 40%;
+    max-width: 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBuscar-text{
+    border: 1px solid var(--color-gray);
+    border-radius: 12px;
+    outline: none;
+
+}
+
+.formBuscar-button{
+    border: 1px solid var(--color-gray);
+    border-radius: 12px;
+}
+
+        /* Ocultar el formulario al inicio */
+.ocultar{
+    display: none!important;
+}
+.text-diagnostico{
+    width: 100%;
+    overflow: auto; /* Permite el scroll si el contenido es mayor que el tamaño del contenedor */
+
+}
+
+.text-diagnostico{
+    overflow: auto; /* Permite el scroll si el contenido es mayor que el tamaño del contenedor */
+    height: 50%;
+    max-height: 100px;
+}
+
+.input-text{
+    width: 100%;
+}
+
+.input-text-input{
+    width: 100%;
+}
+.input__container--variant {
+    border-radius: 30px;
+    max-width: 13em;
+    padding: 1em 1em;
+  }
+  
+  .shadow__input--variant {
+    filter: blur(25px);
+    border-radius: 30px;
+    background-color: #F3FFF9 !important;
+    opacity: 0.5;
+  }
+  
+  .input__button__shadow--variant {
+    border-radius: 15px;
+    background-color: #07372C;
+    padding: 5px;
+    border: none;
+  }
+  
+  .input__button__shadow--variant:hover {
+    background-color: #ffffff !important;
+  }
+  .input__button__shadow:hover path {
+    fill: #07372C !important; /* Cambia el color del icono a negro cuando se pasa el cursor */
+  }
+  
+  .input__search--variant {
+    width: 13em;
+    align-items: center;
+    border-radius: 13em;
+    outline: none;
+    border: none;
+    padding: 0.8em;
+    font-size: 1.2em;
+    color: #002019;
+    background-color: transparent;
+  }
+  
+  .input__search--variant::placeholder {
+    color: #002019;
+    opacity: 0.7;
+  }
+  
+  .input__container--variant {
+    background-color:#fff;
+    border-radius: 1.5em;
+    max-width: 18em;
+    padding: 1em;
+    
+  }

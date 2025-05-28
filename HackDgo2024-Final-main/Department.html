@@ -1,0 +1,826 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Docmed</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+        /*Titulo*/
+        #titDP{
+            color:black;
+            margin-left: 5%;
+        }
+        /* Botones */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Estilos de las tablas */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 25px 5%;
+            font-size: 18px;
+            text-align: left;
+            border-radius: 15px;
+            
+        }
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        table td {
+            background-color: #fff;
+            color: #333;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        #cabezath{
+            background-color: #333;
+            color: white;
+            font-style: italic;
+        }
+        .popup_inner{
+            margin-top: 20px;
+            background-color: white;
+        }
+    </style>
+
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 ">
+                            <div class="social_media_links">
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <li><a href="#"> <i class="fa icono-contacto fa-envelope"></i> info@docmed.com</a>
+                                    </li>
+                                    <li><a href="#"> <i class="fa icono-contacto fa-phone"></i> 160160</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img class="img-logo" src="img/logo.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="index.html">home</a></li>
+                                        <li><a href="#">Expedientes</a></li>
+                                        <li><a href="chat.html">Chat AI <i class=""></i></a></li>
+                                        <li><a href="Doctors.html">Generar Receta</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="Appointment">
+                                <div class="book_btn d-none d-lg-block">
+                                    <a class="popup-with-form" href="landing/index.html">Cerrar sesion</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg bradcam_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <form action class="formBuscar" onsubmit="return handleSubmit(event)">
+                        <div class="input__container input__container--variant">
+                            <div class="shadow__input shadow__input--variant"></div>
+                            <input type="text" name="text" class="input__search input__search--variant" formBuscar-text placeholder="CURP" value="COGA031215">
+                            <button class="input__button__shadow input__button__shadow--variant" class="formBuscar-button" value="buscar">
+                              <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="1.5em" width="13em">
+                                <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#FFF"></path>
+                              </svg>
+                            </button>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service_area ocultar">
+        <div class="container p-0">
+            <div class="row no-gutters dato-oscuro">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service">
+                        <div class="icon">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <h3 >Datos personales</h3>
+                        <p>Información básica del paciente para una atención personalizada.</p>
+                        <button onclick="toggleElemenent(event, 'datos-personales')" class="boxed-btn3-white">Ver Info</button>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 dato-oscuro">
+                    <div class="single_service">
+                        <div class="icon">
+                            <i class="fa-solid fa-notes-medical"></i>
+                        </div>
+                        <h3>Diagnóstico presuntivo</h3>
+                        <p>Evaluación inicial de posibles condiciones médicas.</p>
+                        <a class="popup-with-form boxed-btn3-white" href="#test-form">Ingresar datos</a>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 dato-oscuro">
+                    <div class="single_service">
+                        <div class="icon">
+                            <i class="fa-regular fa-address-card"></i>
+                        </div>
+                        <h3>Antecedentes personales</h3>
+                        <p>Historial médico del paciente relevante para el tratamiento.</p>
+                        <button onclick="toggleElemenent(event, 'antecedentes-clinicos')" class="boxed-btn3-white">Ver Info</button>
+                </div>
+                    <!--Por ordenar-->    
+                </div>
+                <div class="row no-gutters dato-oscuro">
+                    <div class="col-xl-4 col-md-4 dato-oscuro">
+                        <div class="single_service">
+                            <div class="icon">
+                                <i class="fa-regular fa-file"></i>
+                            </div>
+                            <h3>Emergency Care</h3>
+                            <p>Protocolo para atender urgencias médicas.</p>
+                            <button onclick="toggleElemenent(event, 'protocolo-emergencias')" class="boxed-btn3-white">Ver</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4">
+                        <div class="single_service">
+                            <div class="icon">
+                                <i class="fa-solid fa-weight"></i>
+                            </div>
+                            <h3>Exploración física</h3>
+                            <p>Evaluación de datos físicos como peso e IMC.</p>
+                            <button onclick="toggleElemenent(event, 'exploracion-fisica')" class="boxed-btn3-white">Ver</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 dato-oscuro">
+                        <div class="single_service">
+                            <div class="icon">
+                                <i class="fa-solid fa-history"></i>
+                            </div>
+                            <h3>Evolución y seguimiento</h3>
+                            <p>Registro del progreso del paciente a lo largo del tiempo.</p>
+                            <button onclick="toggleElemenent(event, 'evo-seg')" class="boxed-btn3-white">Consultar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters dato-oscuro">
+                    <div class="col-xl-4 col-md-4">
+                        <div class="single_service">
+                            <div class="icon">
+                                <i class="fa-regular fa-sticky-note"></i>
+                            </div>
+                            <h3>Notas adicionales del profesional de la salud</h3>
+                            <p>Comentarios y observaciones del médico.</p>
+                            <button onclick="toggleElemenent(event, 'notas')" class="boxed-btn3-white">Ver notas</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 dato-oscuro">
+                        <div class="single_service">
+                            <div class="icon">
+                                <i class="fa-solid fa-signature"></i>
+                            </div>
+                            <h3>Firma y datos del médico</h3>
+                            <p>Información del profesional que garantiza el tratamiento.</p>
+                            <button onclick="toggleElemenent(event, 'datos')" class="boxed-btn3-white">Ver datos</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <div id="datos-personales" class="ocultar">
+        <div class="popup_inner">
+            <h3 id="titDP">Datos personales</h3>
+            <table>
+                <tr>
+                    <th id="cabezath">Campos</th>
+                    <th id="cabezath">Datos</th>
+                </tr>
+                <tr>
+                    <td>Curp</td>
+                    <td>coga031215</td>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Armando</td>
+                </tr>
+                <tr>
+                    <td>Apellido paterno</td>
+                    <td>Contreras</td>
+                </tr>
+                <tr>
+                    <td>Apellido materno</td>
+                    <td>Garcia</td>
+                </tr>
+                <tr>
+                    <td>Fecha de nacimiento</td>
+                    <td>15/dic/2003</td>
+                </tr>
+                <tr>
+                    <td>Género</td>
+                    <td>Masculino</td>
+                </tr>
+                <tr>
+                    <td>Teléfono</td>
+                    <td>676 888 8888</td>
+                </tr>
+                <tr>
+                    <td>Dirección</td>
+                    <td>Durango</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>armando@hotmail.com</td>
+                </tr>
+                <tr>
+                    <td>Cont. emergencia. nom</td>
+                    <td>Bryan</td>
+                </tr>
+                <tr>
+                    <td>Cont. emergencia. tel</td>
+                    <td>676 777 7777</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Ventana Antecedentes Clínicos -->
+    <div id="antecedentes-clinicos" class="ocultar">
+        <div class="popup_inner">
+            <h3 id="titDP">Antecedentes clínicos</h3>
+            <table>
+                <tr>
+                    <th id="cabezath">Fecha</th>
+                    <th id="cabezath">Diagnóstico</th>
+                </tr>
+                <tr>
+                    <td>20/09/2024</td>
+                    <td>Gripa</td>
+                </tr>
+                <tr>
+                    <td>22/09/2024</td>
+                    <td>Neumonía</td>
+                </tr>
+                <tr>
+                    <td>25/09/2024</td>
+                    <td>Diabetes</td>
+                </tr>
+                <tr>
+                    <td>27/09/2024</td>
+                    <td>Insuficiencia renal</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--Ventana de protocolo de emergencias-->
+    <div id="protocolo-emergencias" class="ocultar">
+        <div class="popup_inner">
+            <h3 id="titDP">Protocolo de emergencias y urgencias medicas</h3>
+            <table>
+                <tr>
+                    <th id="cabezath">Paso</th>
+                    <th id="cabezath">Descripción</th>
+                </tr>
+                <tr>
+                    <td>Aplicacion del PAS</td>
+                    <td>Protegerse, avisar a los servicos de emergencias
+                        y socorrer, en ese orden.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Llamar a emergencias</td>
+                    <td>Informar el tipo de accidente, la localizacion exacta
+                        y las personas implicadas
+                    </td>
+                </tr>
+                <tr>
+                    <td>No mover a los heridos</td>
+                    <td>Espere a que las personas especializadas los mueva, 
+                        limitece a ofrecer primeros auxilios siempre y cuando 
+                        tenga los conocimientos
+                    </td>
+                </tr>
+                <tr>
+                    <td>Llegada de los servicios</td>
+                    <td>Una vez esten los servicios de emergencia en el lugar
+                        ellos haran lo que sea necesario con el paciente
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Ventana de exploracion fisica -->
+    <div id="exploracion-fisica" class="ocultar">
+        <div class="popup_inner">
+            <h3 id="titDP">Exploracion fisica</h3>
+            <table>
+                <tr>
+                    <th id="cabezath">Medidas</th>
+                    <th id="cabezath">Datos</th>
+                </tr>
+                <tr>
+                    <td>Altura</td>
+                    <td>1.70m</td>
+                </tr>
+                <tr>
+                    <td>Peso</td>
+                    <td>90kg</td>
+                </tr>
+                <tr>
+                    <td>IMC</td>
+                    <td>31.1</td>
+                </tr>
+                <tr>
+                    <td>Situacion</td>
+                    <td>Obesidad</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Ventana de evolucion y seguimiento -->
+    <div id="evo-seg" class="ocultar">
+        <div class="popup_inner">
+            <h3 id="titDP">Evolución y seguimiento.</h3>
+            <table>
+                <tr>
+                    <th id="cabezath">Fecha</th>
+                    <th id="cabezath">Estado</th>
+                </tr>
+                <tr>
+                    <td>10/10/2024</td>
+                    <td>Muy enfermo</td>
+                </tr>
+                <tr>
+                    <td>12/10/2024</td>
+                    <td>En recuperación</td>
+                </tr>
+                <tr>
+                    <td>14/10/2024</td>
+                    <td>Curado</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Ventana de notas -->
+    <div id="notas" class="ocultar">
+        <div class="popup_inner">
+            <h3 id="titDP">Notas del medico.</h3>
+            <table>
+                <tr>
+                    <th id="cabezath">Fecha</th>
+                    <th id="cabezath">Nota</th>
+                </tr>
+                <tr>
+                    <td>10/10/2024</td>
+                    <td>Necesita tomar el medicamento que le recete y 5 dias de reposo</td>
+                </tr>
+                <tr>
+                    <td>12/10/2024</td>
+                    <td>Tome una dosis menor del medicamento y continue con el reposo</td>
+                </tr>
+                <tr>
+                    <td>14/10/2024</td>
+                    <td>Evite consumir alimentos hirritantes</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Ventana de datos medicos -->
+    <div id="datos" class="ocultar">
+        <div class="popup_inner">
+            <h3 id="titDP">Datos del medico.</h3>
+            <table>
+                <tr>
+                    <th id="cabezath">Campo</th>
+                    <th id="cabezath">Descripcion</th>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Dr. Juan Hernandez Garcia</td>
+                </tr>
+                <tr>
+                    <td>Clinica / Hospital</td>
+                    <td>Clinica San Jorge</td>
+                </tr>
+                <tr>
+                    <td>Cedula</td>
+                    <td>1234567</td>
+                </tr>
+                <tr>
+                    <td>Titulo</td>
+                    <td>Medico cirujano</td>
+                </tr>
+                <tr>
+                    <td>Fecha de expedicion de la cedula</td>
+                    <td>15-06/2020</td>
+                </tr>
+                <tr>
+                    <td>Numero de registro</td>
+                    <td>987654321</td>
+                </tr>
+                <tr>
+                    <td>Firma</td>
+                    <td>"Firma del doctor"</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="separador"></div>
+
+    <!-- bradcam_area_end  -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider  d-flex align-items-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                                <h3> <span>Consultar expedientes</span> <br>
+                                </h3>
+                                <p>Contamos con una herramienta para consultar los expedientes <br>de los pacientes.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                                <h3> <span>Digitalizacion de recetas</span> <br>
+                                    </h3>
+                                <p>Ofrecemos una herramienta para la elaboracion de recetas <br>de forma digital</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center slider_bg_3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                                <h3> <span>Chat de IA</span> <br>
+                                    </h3>
+                                <p>Hacemos uso de la inteligencia artificial para brindar a los <br>
+                                medicos una herramienta poderosa</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service_area_start -->
+   
+
+
+            <!-- footer start -->
+            <footer class="footer">
+                <div class="footer_top">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Logo y descripción del proyecto -->
+                            <div class="col-xl-4 col-md-6 col-lg-4">
+                                <div class="footer_widget">
+                                    <div class="footer_logo">
+                                        <a href="#">
+                                            <img class="img-logo" src="img/logo.jpg" alt="Logo">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        Herramienta avanzada para el diagnóstico médico asistido por inteligencia artificial y detección de interacciones farmacológicas.
+                                    </p>
+                                    <!-- Enlaces a redes sociales -->
+                                    <div class="socail_links">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-twitter-alt"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Departamentos o secciones -->
+                            <div class="col-xl-2 offset-xl-1 col-md-6 col-lg-3">
+                                <div class="footer_widget">
+                                    <h3 class="footer_title">Departamentos</h3>
+                                    <ul>
+                                        <li><a href="#">Diagnóstico</a></li>
+                                        <li><a href="#">Interacciones farmacológicas</a></li>
+                                        <li><a href="#">Historial Médico</a></li>
+                                        <li><a href="#">Gestión de recetas</a></li>
+                                        <li><a href="#">Diagnóstico por IA</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+            
+                            <!-- Enlaces útiles -->
+                            <div class="col-xl-2 col-md-6 col-lg-2">
+                                <div class="footer_widget">
+                                    <h3 class="footer_title">Enlaces Útiles</h3>
+                                    <ul>
+                                        <li><a href="#">Sobre nosotros</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Tecnología</a></li>
+                                        <li><a href="#">Contacto</a></li>
+                                        <li><a href="#">Citas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+            
+                            <!-- Información de contacto -->
+                            <div class="col-xl-3 col-md-6 col-lg-3">
+                                <div class="footer_widget">
+                                    <h3 class="footer_title">Dirección</h3>
+                                    <p>
+                                        200, D-block, Green Lane, USA <br>
+                                        +1 367 467 8934 <br>
+                                        soporte@medsmart.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Derechos reservados -->
+                <div class="copy-right_text">
+                    <div class="container">
+                        <div class="footer_border"></div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <p class="copy_right text-center">
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Hecho con <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="https://medsmart.com" target="_blank">Medsmart Diagnostics</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            
+            <!-- footer end  -->
+            <!-- link that opens popup -->
+
+            <!-- form itself end-->
+            <form id="test-form" class="white-popup-block mfp-hide">
+                <div class="popup_box ">
+                    <div class="popup_inner">
+                        <h3>Llena el siguiente formulario</h3>
+                            <div class="row">
+                                <div class="input-text">
+                                    <p style="color: black;">Diagnostico y prescripción médica</p>
+                                    <textarea class="input-text-input" placeholder="ingresa el diagnostico"  name="" id="param1"></textarea>
+                                </div>
+                                <p class="text-diagnostico" id="respuesta">Respuesta aparecerá aquí...</p>
+                                <div >
+                                    <button id="sendButton" class="boxed-btn3">Enviar</button>
+                                </div>
+                            </div>
+
+                        <script>
+                            document.getElementById('sendButton').addEventListener('click', async function() {
+                                event.preventDefault();
+                            // Obtener el valor del parámetro
+                            const param1 = document.getElementById('param1').value;
+                    
+                            // Limpiar mensaje de feedback anterior
+                            document.getElementById('respuesta').textContent = "";
+                    
+                            try {
+                                const phpResponse = await fetch('http://innovamed.atwebpages.com/php/datos.php', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/x-www-form-urlencoded',
+                                    },
+                                    body: `param1=${encodeURIComponent(param1)}`, // Corregido
+                                });
+                    
+                                if (!phpResponse.ok) {
+                                    throw new Error(`Error en la respuesta de PHP: ${phpResponse.status}`);
+                                }
+                    
+                                // Decodificar la respuesta JSON de PHP
+                                const data = await phpResponse.json();
+                    
+                                // Verifica si el array `datos` tiene contenido
+                                if (data.datos && data.datos.length > 0) {
+                                    const diagnosticos = data.datos.join(', ');
+                                    //document.getElementById('respuesta').textContent = `Diagnóstico(s) obtenidos: ${diagnosticos}`;
+                    
+                                    // Llamar a la API de OpenAI con el diagnóstico obtenido
+                                    await consultarAPI(diagnosticos, param1);
+                                } else {
+                                    //document.getElementById('respuesta').textContent = "No se encontraron diagnósticos para el CURP proporcionado.";
+                                }
+                    
+                            } catch (error) {
+                                //document.getElementById('respuesta').textContent = `Error: ${error.message}`;
+                            }
+                        });
+                    
+                        async function consultarAPI(diagnosticos, param1) {
+                            if (!diagnosticos) {
+                                document.getElementById("respuesta").textContent = "No se puede consultar la API sin diagnósticos.";
+                                return;
+                            }
+                    
+                            const API_KEY = 'poner apikey';
+                            const API_URL = 'https://api.openai.com/v1/chat/completions';
+                    
+                            try {
+                                const openaiResponse = await fetch(API_URL, {
+                                    method: 'POST',
+                                    headers: {
+                                        'Authorization': `Bearer ${API_KEY}`,
+                                        'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify({
+                                        model: 'gpt-3.5-turbo',
+                                        messages: [{ role: 'user', content: `me puedes buscar contraindicaciones en este diagnostico` + diagnosticos + ` para los siguientes padecimientos ` + param1}],
+                                    }),
+                                });
+                    
+                                if (!openaiResponse.ok) {
+                                    throw new Error(`Error en la API de OpenAI: ${openaiResponse.status}`);
+                                }
+                    
+                                const openaiData = await openaiResponse.json();
+                    
+                                // Verifica si `choices` está definido y tiene al menos un elemento
+                                if (openaiData.choices && openaiData.choices.length > 0) {
+                                    const respuestaOpenAI = openaiData.choices[0].message.content;
+                                    document.getElementById("respuesta").textContent = `${respuestaOpenAI}`;
+                                } else {
+                                    document.getElementById("respuesta").textContent = "No se pudo obtener una respuesta de la API de OpenAI.";
+                                }
+                    
+                            } catch (error) {
+                                console.error('Error al obtener respuesta de ChatGPT:', error);
+                                document.getElementById("respuesta").textContent = "Hubo un error en la consulta a OpenAI. Inténtalo nuevamente.";
+                            }
+                        }
+                        </script>
+                    </div>
+                </div>
+            </form>
+            <!-- form itself end -->
+
+            <!-- JS here -->
+            <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+            <script src="js/vendor/jquery-1.12.4.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/isotope.pkgd.min.js"></script>
+            <script src="js/ajax-form.js"></script>
+            <script src="js/waypoints.min.js"></script>
+            <script src="js/jquery.counterup.min.js"></script>
+            <script src="js/imagesloaded.pkgd.min.js"></script>
+            <script src="js/scrollIt.js"></script>
+            <script src="js/jquery.scrollUp.min.js"></script>
+            <script src="js/wow.min.js"></script>
+            <script src="js/nice-select.min.js"></script>
+            <script src="js/jquery.slicknav.min.js"></script>
+            <script src="js/jquery.magnific-popup.min.js"></script>
+            <script src="js/plugins.js"></script>
+            <script src="js/gijgo.min.js"></script>
+            <!--contact js-->
+            <script src="js/contact.js"></script>
+            <script src="js/jquery.ajaxchimp.min.js"></script>
+            <script src="js/jquery.form.js"></script>
+            <script src="js/jquery.validate.min.js"></script>
+            <script src="js/mail-script.js"></script>
+
+            <script src="js/main.js"></script>
+            <script src="js/index.js"></script>
+            <script>
+                $('#datepicker').datepicker({
+                    iconsLibrary: 'fontawesome',
+                    icons: {
+                        rightIcon: '<span class="fa fa-caret-down"></span>'
+                    }
+                });
+                $('#datepicker2').datepicker({
+                    iconsLibrary: 'fontawesome',
+                    icons: {
+                        rightIcon: '<span class="fa fa-caret-down"></span>'
+                    }
+
+                });
+                $(document).ready(function () {
+                    $('.js-example-basic-multiple').select2();
+                });
+            </script>
+</body>
+
+</html>

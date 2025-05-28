@@ -1,0 +1,536 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Docmed</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --color-dark-green: #2B4016;
+            --color-medium-green: #50732D;
+            --color-light-green: #84A64E;
+            --color-light-gray: #F0F2F2;
+            --color-gray: #A8BBBF;
+            /*Variables para las letras*/
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fcfafa;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: -1px 1px 1px rgba(128, 128, 128, 0.397);
+            margin-top: 32px;
+        }
+
+        .formulario-titulo {
+            margin: 0 auto;
+        }
+
+        .formulario-label {
+            display: flex;
+            flex-direction: column;
+            margin: 12px;
+        }
+
+        .formulario-label input,
+        .formulario-label textarea {
+            background-color: #f5f5f5;
+            border: 1px solid gray;
+            border-radius: 8px;
+            box-shadow: -1px 1px 1px rgba(128, 128, 128, 0.397);
+            height: 32px;
+            padding-left: 8px;
+            width: 100%;
+            /* Mantiene el ancho igual para input y textarea */
+        }
+
+        .formulario-label textarea {
+            height: 60px;
+
+        }
+
+        textarea {
+            height: 64px;
+            /* Doble de largo comparado con los inputs */
+        }
+
+        .formulario-label span {
+            font-weight: bold;
+        }
+
+        .label-button {
+            display: inline-block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 150px;
+            min-width: 150px;
+            height: 32px;
+            border: none;
+            background-color: var(--color-medium-green);
+            font-size: 20px;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .label-button:hover {
+            border: 1px solid var(--color-medium-green);
+            background-color: white;
+            color: var(--color-medium-green);
+        }
+
+        .formulario-agregar {
+            background-color: white;
+            border-radius: 6px;
+            padding: 5px;
+            border: 1px solid var(--color-medium-green);
+            color: var(--color-medium-green);
+            cursor: pointer;
+        }
+
+        .formulario-eliminar {
+            background-color: white;
+            border-radius: 6px;
+            padding: 5px;
+            border: 1px solid var(--color-medium-green);
+            color: var(--color-medium-green);
+            cursor: pointer;
+        }
+
+        .medicamentos-title {
+            width: fit-content;
+            margin: 0 auto;
+
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 ">
+                            <div class="social_media_links">
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <li><a href="#"> <i class="fa icono-contacto fa-envelope"></i> info@docmed.com</a>
+                                    </li>
+                                    <li><a href="#"> <i class="fa icono-contacto fa-phone"></i> 160160</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img class="img-logo" src="img/logo.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="index.html">home</a></li>
+                                        <li><a href="Department.html">Expedientes</a></li>
+                                        <li><a href="chat.html">Chat AI <i class=""></i></a></li>
+                                        <li><a href="#">Generar Receta</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="Appointment">
+                                <div class="book_btn d-none d-lg-block">
+                                    <a class="popup-with-form" href="landing/index.html">Cerrar sesion</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form class="formulario" id="form-receta">
+        <h1 class="formulario-titulo">Ingresa los datos de la receta</h1>
+
+        <!-- Campos de entrada -->
+        <label class="formulario-label" for="nombre-medico">
+            <span>Nombre del médico</span>
+            <input type="text" id="nombre-medico" name="nombre-medico" placeholder="Nombre del médico" required>
+        </label>
+        <label class="formulario-label" for="cedula-medico">
+            <span>Cédula del médico</span>
+            <input type="text" id="cedula-medico" name="cedula-medico" placeholder="Cédula del médico" required>
+        </label>
+        <label class="formulario-label" for="fecha-emision">
+            <span>Fecha de emisión</span>
+            <input type="date" id="fecha-emision" name="fecha-emision" required>
+        </label>
+        <label class="formulario-label" for="institucion-educativa">
+            <span>Institución educativa</span>
+            <input type="text" id="institucion-educativa" name="institucion-educativa" required>
+        </label>
+        <label class="formulario-label" for="domicilio-consultorio">
+            <span>Domicilio del consultorio</span>
+            <input type="text" id="domicilio-consultorio" name="domicilio-consultorio" required>
+        </label>
+        <label class="formulario-label" for="telefono-medico">
+            <span>Teléfono del médico</span>
+            <input type="text" id="telefono-medico" name="telefono-medico" required>
+        </label>
+        <label class="formulario-label" for="curp-paciente">
+            <span>CURP del paciente</span>
+            <input type="text" id="curp-paciente" name="curp-paciente" required>
+        </label>
+
+        <label class="formulario-label" for="diagnostico">
+            <span>Indicaciones</span>
+            <textarea id="diagnostico" name="diagnostico"
+                placeholder="Ingresa el diagnostico de tu pacientes"></textarea>
+        </label>
+
+        <!-- Contenedor para los medicamentos -->
+        <div id="medicamentos-container">
+            <h2 class="medicamentos-title">Medicamentos</h2>
+            <button class="formulario-agregar" type="button" onclick="agregarMedicamento()">Agregar medicamento</button>
+        </div>
+
+        <button type="submit" class="label-button">Enviar</button>
+    </form>
+    <!-- Modal -->
+    <div id="responseModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="modal-message">Aquí se mostrará la respuesta de la API</p>
+        </div>
+    </div>
+
+    <!-- Estilos para el modal -->
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+
+
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo y descripción del proyecto -->
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img class="img-logo" src="img/logo.jpg" alt="Logo">
+                                </a>
+                            </div>
+                            <p>
+                                Herramienta avanzada para el diagnóstico médico asistido por inteligencia artificial y detección de interacciones farmacológicas.
+                            </p>
+                            <!-- Enlaces a redes sociales -->
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Departamentos o secciones -->
+                    <div class="col-xl-2 offset-xl-1 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">Departamentos</h3>
+                            <ul>
+                                <li><a href="#">Diagnóstico</a></li>
+                                <li><a href="#">Interacciones farmacológicas</a></li>
+                                <li><a href="#">Historial Médico</a></li>
+                                <li><a href="#">Gestión de recetas</a></li>
+                                <li><a href="#">Diagnóstico por IA</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <!-- Enlaces útiles -->
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">Enlaces Útiles</h3>
+                            <ul>
+                                <li><a href="#">Sobre nosotros</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Tecnología</a></li>
+                                <li><a href="#">Contacto</a></li>
+                                <li><a href="#">Citas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <!-- Información de contacto -->
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">Dirección</h3>
+                            <p>
+                                200, D-block, Green Lane, USA <br>
+                                +1 367 467 8934 <br>
+                                soporte@medsmart.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Derechos reservados -->
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Hecho con <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="https://medsmart.com" target="_blank">Medsmart Diagnostics</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- footer end  -->
+    <!-- link that opens popup -->
+
+
+    <!-- form itself end -->
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- Scripts nuestros -->
+    <script src="./src/js/receta.js"></script>
+
+    <script>
+        let contadorMedicamentos = 0; // Inicializar el contador de medicamentos
+
+        // Función para agregar un nuevo conjunto de campos de medicamento
+        function agregarMedicamento() {
+            contadorMedicamentos++; // Incrementar el contador
+
+            const container = document.getElementById('medicamentos-container');
+
+            // Crear un nuevo div para el medicamento
+            const div = document.createElement('div');
+            div.classList.add('medicamento');
+
+            // Definir la estructura HTML para el nuevo medicamento
+            div.innerHTML = `
+                <h3>Medicamento ${contadorMedicamentos}</h3>
+                <label class="formulario-label">
+                    <span>Nombre genérico del medicamento</span>
+                    <input type="text" name="nombre-generico" placeholder="Nombre genérico del medicamento">
+                </label>
+                <label class="formulario-label">
+                    <span>Forma farmaceutica</span>
+                    <input type="text" name="forma-farmaceutica" placeholder="Nombre genérico del medicamento">
+                </label>                
+                <label class="formulario-label" for="telefono-medico">
+                    <span>Dosis</span>
+                    <input type="text" name="dosis" placeholder="Dosis recomendada">
+                </label>
+                <label class="formulario-label" for="telefono-medico">
+                    <span>Presentación</span>
+                    <input type="text" name="presentacion" placeholder="Presentación del medicamento">
+                </label>
+                <label class="formulario-label" for="telefono-medico">
+                    <span>Frecuencia</span>
+                    <input type="text" name="frecuencia" placeholder="Freciencia del medicamento">
+                </label>
+                <label class="formulario-label" for="telefono-medico">
+                    <span>Duracion</span>
+                    <input type="text" name="duracion" placeholder="Presentación del medicamento">
+                </label>
+                <label class="formulario-label" for="medicamento">
+                    <span>Indicaciones</span>
+                    <textarea id="medicamento" name="indicaciones" placeholder="Nombre del medicamento"></textarea>
+                </label>
+                <button class="formulario-eliminar" type="button" onclick="eliminarMedicamento(this)">Eliminar medicamento</button>
+                <hr>
+            `;
+
+            // Insertar el nuevo medicamento antes del botón "Agregar medicamento"
+            container.insertBefore(div, container.lastElementChild);
+        }
+
+        // Función para eliminar un medicamento
+        function eliminarMedicamento(button) {
+            button.parentElement.remove();
+            // Actualizar los números de medicamentos restantes
+            contadorMedicamentos--;
+            const medicamentos = document.querySelectorAll('.medicamento h3');
+            medicamentos.forEach((medicamento, index) => {
+                medicamento.textContent = `Medicamento ${index + 1}`;
+            });
+        }
+    </script>
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
+
+        });
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
+</body>
+
+</html>
